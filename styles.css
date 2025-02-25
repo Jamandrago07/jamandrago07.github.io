@@ -89,7 +89,7 @@ body {
       }
     }
     
-    /* New Contact Form Styles */
+/* New Contact Form Styles */
 #contactForm {
   max-width: 600px;
   margin: 0 auto;
@@ -106,4 +106,54 @@ body {
 #contactForm textarea:focus {
   border-color: #00BFFF;
   outline: none;
+}
+
+footer {
+  background: #1A2A6C;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 20px;
+}
+
+footer p {
+  margin: 0;
+}
+
+.social-links {
+  margin-top: 10px;
+}
+
+.social-links a {
+  color: #00BFFF;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #009ACD;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark-mode header {
+  background: linear-gradient(135deg, #003366, #0059b3);
+}
+
+body.dark-mode footer {
+  background: #003366;
+}
+
+body.dark-mode .btn {
+  background: #4CAF50;
+  color: #ffffff;
+}
+
+body.dark-mode .btn:hover {
+  background: #45A049;
 }
