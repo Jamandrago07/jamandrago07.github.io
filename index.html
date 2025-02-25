@@ -5,9 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Automation Engineer</title>
   <link rel="stylesheet" href="styles.css">
- /* <style> */
-    
- /* </style> */
 </head>
 <body>
   <header>
@@ -15,6 +12,7 @@
     <p>Driving Efficiency Through Innovation</p>
     <a href="#about" class="btn">Learn More About Me</a>
     <a href="#contact" class="btn">Contact Me for Projects</a>
+    <button id="theme-toggle" class="btn">Toggle Dark Mode</button>
   </header>
 
   <section id="about">
@@ -50,6 +48,11 @@
 
   <footer>
     <p>&copy; 2025 Jaime Ramirez. All rights reserved.</p>
+    <div class="social-links">
+    <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+    <a href="https://github.com/yourprofile" target="_blank">GitHub</a>
+    <!-- Add more social media links as needed -->
+  </div>
   </footer>
 
   <script>
@@ -60,5 +63,28 @@
       this.reset();
     });
   </script>
+  <script>
+  // Check if dark mode is enabled in localStorage
+  const themeToggle = document.getElementById('theme-toggle');
+  const body = document.body;
+
+  // Load saved theme preference
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark') {
+    body.classList.add('dark-mode');
+  }
+
+  // Toggle dark mode on button click
+  themeToggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+
+    // Save theme preference to localStorage
+    if (body.classList.contains('dark-mode')) {
+      localStorage.setItem('theme', 'dark');
+    } else {
+      localStorage.setItem('theme', 'light');
+    }
+  });
+</script>
 </body>
 </html>
